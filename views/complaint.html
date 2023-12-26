@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Login Entry</title>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <h3>
+      ProLoT Software Systems Pvt. Ltd. <br />
+      Raising Complaint...!
+    </h3>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/myprofile"
+          ><b>My Profile</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active disabled" href="#" aria-disabled="true"
+          ><b>Raise Complaint</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/mycomplaints" aria-disabled="false"
+          ><b>My Complaints</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/updatepwd" aria-disabled="true"
+          ><b>Update Password</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="false"
+          ><b>Logout</b></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <!--  -->
+    <!--  Raise Complaint Details-->
+    <form action="/complaintdata" method="POST">
+      <div class="mb-3 col-sm-3">
+        <label for="id" class="form-label">Your ID:</label>
+        <input
+          style="font-weight: bold; font-size: medium"
+          type="text"
+          class="form-control"
+          id="id"
+          name="id"
+          aria-describedby="id"
+          value="<%= userid %>"
+          readonly
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="problem" class="form-label">Problem (Complaint) : </label>
+        <input
+          type="text"
+          maxlength="50"
+          required
+          class="form-control"
+          id="problem"
+          name="problem"
+          placeholder="Enter Problem"
+          required
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="problem_date" class="form-label"
+          >Date (Problem Occurs):
+        </label>
+        <input
+          type="date"
+          maxlength="11"
+          required
+          class="form-control"
+          id="problem_date"
+          name="problem_date"
+          placeholder="Enter Date"
+          required
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="location" class="form-label"
+          >Location-To-Reach (City) :</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          name="location"
+          placeholder="Enter Location"
+          required
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="landmark" class="form-label">Land Mark :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="landmark"
+          name="landmark"
+          placeholder="Enter Land Mark"
+          required
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="contact" class="form-label">Contact : </label>
+        <input
+          type="number"
+          maxlength="10"
+          class="form-control"
+          id="contact"
+          name="contact"
+          aria-describedby="contact"
+          placeholder="Enter Contact"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br /><br />
+
+    <!-- -->
+  </body>
+</html>

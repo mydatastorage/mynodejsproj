@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Complaint Records</title>
+    <style>
+      table,
+      thead,
+      td {
+        border: 2px solid black;
+        border-radius: 10px;
+        border-color: rgb(43, 62, 43);
+      }
+
+      tr:nth-child(odd) {
+        background-color: rgb(195, 225, 225);
+      }
+      thead td {
+        background-color: #dcf1e6;
+      }
+      thead {
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <h1>ProLoT Software Systems Pvt. Ltd.</h1>
+    <h3>Complaint Details</h3>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="/myprofile"
+          aria-disabled="false"
+          ><b>My Profile</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/complaint"><b>Raise Complaint</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active disabled" aria-disabled="false" href="#"
+          ><b>My Complaints</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/updatepwd"><b>Update Password</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="false"
+          ><b>Logout</b></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <!--   -->
+    <h4><label for="" style="margin-left: 10%">Complaint's List</label></h4>
+    <table cellpadding="10px" cellspacing="5px" width="30%">
+      <thead>
+        <td>problem</td>
+        <td>Complaint ID</td>
+        <td>problem_date</td>
+        <td>Location</td>
+        <td>Landmark</td>
+        <td>Contact</td>
+        <td>Status</td>
+      </thead>
+      <% for(var i = 0 ; i < obj_data.length; i++){ %>
+      <tr>
+        <td><%=obj_data[i].problem %></td>
+        <td><%=obj_data[i].complaintid %></td>
+        <td><%=obj_data[i].problem_date %></td>
+        <td><%=obj_data[i].location %></td>
+        <td><%=obj_data[i].landmark %></td>
+        <td><%=obj_data[i].contact %></td>
+        <td><%=obj_data[i].status %></td>
+      </tr>
+
+      <%}%>
+    </table>
+  </body>
+</html>

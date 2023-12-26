@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Admin. Page</title>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <h1>
+      ProLoT Software Systems Pvt. Ltd. <br />
+      <h4>Admin. Page</h4>
+    </h1>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/proj"
+          ><b>Home</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active disabled" href="#"><b>Admin. Login</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact"><b>Contact</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/support" tabindex="-1" aria-disabled="false"
+          ><b>Support</b></a
+        >
+      </li>
+    </ul>
+    <!--  -->
+    <form action="/adminlogindata" method="POST">
+      <div class="mb-5 col-sm-3">
+        <label for="adminid" class="form-label"><b>ADMIN. ID :</b></label>
+        <input
+          type="text"
+          class="form-control"
+          id="adminid"
+          name="adminid"
+          aria-describedby="adminid"
+          placeholder="Enter Login ID"
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="adminpwd" class="form-label"><b>Password :</b></label>
+        <input
+          type="password"
+          class="form-control"
+          id="adminpwd"
+          name="adminpwd"
+          placeholder="Enter Admin. Password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

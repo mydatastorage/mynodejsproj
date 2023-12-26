@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Login Entry</title>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <h3>
+      ProLoT Software Systems Pvt. Ltd. <br />
+      Sign-Up Entry...!
+    </h3>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/proj"
+          ><b>Home</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/adminlogin"><b>Admin Login</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active disabled" href="/signup" aria-disabled="true"
+          ><b>New User</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="/loginform"
+          tabindex="-1"
+          aria-disabled="false"
+          ><b>Sign-In</b></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <!--  -->
+    <!--  Login Details-->
+    <div
+      style="margin-left: 15%; width: 80%; background-color: rgb(129, 164, 230)"
+    >
+      <form action="/signupdata" method="POST">
+        <div class="mb-3 col-sm-2">
+          <label for="loginid" class="form-label">Login ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            name="id"
+            aria-describedby="loginid"
+            placeholder="Enter Login ID"
+          />
+        </div>
+        <div class="mb-3 col-sm-2">
+          <label for="loginpwd" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            name="pwd"
+            placeholder="Enter Login Password"
+            required
+          />
+        </div>
+        <div class="mb-3 col-sm-2">
+          <label for="reloginpwd" class="form-label">Re-Type Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="reloginpwd"
+            name="reloginpwd"
+            placeholder="Re-type Login Password"
+            required
+          />
+        </div>
+        <div class="mb-3 col-sm-2">
+          <label for="useruname" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="uname"
+            name="uname"
+            aria-describedby="userinput"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="mb-3 col-sm-2">
+          <label for="usermob" class="form-label">Contact No.</label>
+          <input
+            type="number"
+            class="form-control"
+            id="mob"
+            name="mob"
+            aria-describedby="usermob"
+            placeholder="Enter your mobile No."
+            required
+          />
+        </div>
+        <div class="mb-3 col-sm-2">
+          <label for="useremail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            aria-describedby="useremail"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <br /><br />
+    <h5>
+      Already Have User-ID Click
+      <a style="text-decoration: none" href="/loginform">Here</a>
+    </h5>
+
+    <!-- -->
+  </body>
+</html>

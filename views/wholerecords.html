@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Whole Records</title>
+    <style>
+      table,
+      thead,
+      td {
+        border: 2px solid black;
+        border-radius: 10px;
+        border-color: rgb(43, 62, 43);
+      }
+
+      tr:nth-child(odd) {
+        background-color: rgb(195, 225, 225);
+      }
+      thead td {
+        background-color: #dcf1e6;
+      }
+      thead {
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+
+    <h1>ProLoT Software Systems Pvt. Ltd.</h1>
+    <h3>User's Detail</h3>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/view"
+          ><b>All Users</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/allcomplaint"><b>All Complaints</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/idwise"><b>ID Detail</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/compidwise"><b>Complaint ID</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/incomplete"><b>In-Complete Status</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/complete"><b>Complete Status</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/u/logout" tabindex="-1" aria-disabled="false"
+          ><b>Logout</b></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <!--  -->
+    <h4><label for="" style="margin-left: 10%">Registered User List</label></h4>
+    <table cellpadding="10px" cellspacing="5px" width="30%">
+      <thead>
+        <td>ID</td>
+        <td>Password</td>
+        <td>Name</td>
+        <td>Mobile</td>
+        <td>Email</td>
+      </thead>
+      <% var count = 0; for(var i = 0 ; i < obj_data.length; i++){ %>
+      <tr>
+        <td><%=obj_data[i].id %></td>
+        <td>*******</td>
+        <td><%=obj_data[i].uname %></td>
+        <td><%=obj_data[i].mob %></td>
+        <td><%=obj_data[i].email %></td>
+      </tr>
+
+      <%count++;}%>
+    </table>
+    <span>Total Records : <b><%=count%></b></span>
+  </body>
+</html>

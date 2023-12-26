@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Login Entry</title>
+  </head>
+  <body>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <h3>
+      ProLoT Software Systems Pvt. Ltd. <br />
+      Login Page...!
+    </h3>
+    <hr />
+
+    <!-- Navigation Bar -->
+    <ul class="nav border border-warning">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/proj"
+          ><b>Home</b></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin"><b>Admin Login</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signup"><b>New User</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+          ><b>Sign-In</b></a
+        >
+      </li>
+    </ul>
+    <hr />
+    <!--  -->
+    <!--  Login Details-->
+    <form action="/logindata" method="POST">
+      <div class="mb-5 col-sm-3">
+        <label for="id" class="form-label"><b>Login ID :</b></label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          name="id"
+          aria-describedby="id"
+          placeholder="Enter Login ID"
+        />
+      </div>
+      <div class="mb-3 col-sm-3">
+        <label for="loginpwd" class="form-label"><b>Password :</b></label>
+        <input
+          type="password"
+          class="form-control"
+          id="pwd"
+          name="pwd"
+          placeholder="Enter Login Password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br /><br />
+    <h5>
+      New User Click <a style="text-decoration: none" href="/signup">Here</a>
+    </h5>
+
+    <!-- -->
+  </body>
+</html>
